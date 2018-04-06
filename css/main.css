@@ -1,12 +1,25 @@
-*,
+/**,
 *::before,
 *::after {
   box-sizing: border-box;
-}
+}*/
 
 body {
-  margin: 20px 0;
-  background: #6589F9;
+/*  margin: 20px 0;*/
+  background-image: url("../dark-triangles/dark-triangles.png");
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3em; color: red;
+}
+
+p {
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 2em; color: red;
+  margin-top: -25px;
 }
 
 .grid {
@@ -21,7 +34,7 @@ body {
   position: relative;
   transition: all .4s linear;
   transform-style: preserve-3d;
-  margin: 5px;
+  margin: 4px;
 }
 
 .front {
@@ -30,7 +43,7 @@ body {
 
 .back {
   transform: rotateY(180deg);
-  background-color: white;
+  /*background-color: white;*/
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
@@ -39,8 +52,8 @@ body {
 .card,
 .back,
 .front {
-  height: 150px;
-  width: 150px;
+  height: 170px;
+  width: 130px;
 }
 
 .back,
@@ -50,7 +63,7 @@ body {
 }
 
 .selected {
-  border: 2px solid yellow;
+  border: 2px solid red;
   transform: rotateY(180deg);
 }
 

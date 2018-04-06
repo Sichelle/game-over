@@ -1,42 +1,59 @@
 const memoryGame = () => {
 
-  let imgs = []
+  // let imgs = []
 
   fetch("https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json")
     .then(res => res.json())
     .then(hero => {
 
+
       const heros = [
 
         {
-          'name': `${hero[530].name}`,
-          'img': `${hero[530].images.sm}`,
+          'name': `${hero[23].name}`,
+          'img': `${hero[23].images.sm}`,
         },
 
         {
-          'name': `${hero[201].name}`,
-          'img': `${hero[201].images.sm}`,
+          'name': `${hero[41].name}`,
+          'img': `${hero[41].images.sm}`,
         },
 
         {
-          'name': `${hero[332].name}`,
-          'img': `${hero[332].images.sm}`,
+          'name': `${hero[52].name}`,
+          'img': `${hero[52].images.sm}`,
         },
 
         {
-          'name': `${hero[334].name}`,
-          'img': `${hero[334].images.sm}`,
+          'name': `${hero[111].name}`,
+          'img': `${hero[111].images.sm}`,
         },
 
         {
-          'name': `${hero[233].name}`,
-          'img': `${hero[233].images.sm}`,
+          'name': `${hero[154].name}`,
+          'img': `${hero[154].images.sm}`,
         },
 
         {
-          'name': `${hero[0].name}`,
-          'img': `${hero[0].images.sm}`,
+          'name': `${hero[289].name}`,
+          'img': `${hero[289].images.sm}`,
         },
+
+        {
+          'name': `${hero[30].name}`,
+          'img': `${hero[30].images.sm}`,
+        },
+
+        {
+          'name': `${hero[40].name}`,
+          'img': `${hero[40].images.sm}`,
+        },
+
+        {
+          'name': `${hero[167].name}`,
+          'img': `${hero[167].images.sm}`,
+        },
+
       ]
 
     // creation des paires + randomization
@@ -78,7 +95,7 @@ const memoryGame = () => {
       let delay = 1000;
       let previousTarget = null
 
-      //la putain de fonction pour match les cartes de ta mère
+      //la fonction pour match les cartes 
       const match = () => {
        const selected = document.querySelectorAll('.selected');
        selected.forEach(card => {
@@ -86,7 +103,7 @@ const memoryGame = () => {
        });
      }
 
-     //la putain de fonction pour reset (lancée à chaque match)
+     //la fonction pour reset (lancée à chaque match)
      const reset = () => {
        firstGuess = ''
        secondGuess = ''
@@ -95,7 +112,7 @@ const memoryGame = () => {
        const selected = document.querySelectorAll('.selected')
        selected.forEach(card => {
          card.classList.remove('selected')
-         card.style.borderColor = "transparent"
+         // card.style.borderColor = "transparent"
        })
 
      }
@@ -144,6 +161,5 @@ const memoryGame = () => {
     })
 
 }
-
 
 memoryGame()
